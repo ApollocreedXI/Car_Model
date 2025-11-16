@@ -11,7 +11,7 @@ model = XGBRegressor()
 model.load_model('model.json')
 
 # Create Flask app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # HTML template for user input
 html_template = """
@@ -69,4 +69,5 @@ def predict():
     return jsonify({"prediction": prediction})
 
 if __name__ == "__main__":
+
     app.run(debug=True)
