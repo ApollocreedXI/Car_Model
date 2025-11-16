@@ -51,7 +51,7 @@ def home():
 def predict():
     # Extract feature values from the form data
     features = [
-        float(request.form[f"feature{i}"]) for i in range(1, 11)
+        float(request.form[f"feature{i}"]) for i in range(1, 7)
     ]
     # Convert to a numpy array
     features = np.array(features).reshape(1, -1)
