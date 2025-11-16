@@ -58,7 +58,7 @@ def predict():
     # Make a prediction
     prediction = model.predict(features)[0]
     # Return the prediction as JSON
-    return jsonify({"prediction": prediction})
+    return jsonify({"prediction": float(prediction)})
 
 if __name__ == "__main__":
 
